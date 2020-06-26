@@ -102,15 +102,17 @@ body {font-family: 'Open Sans', sans-serif !important;}
   display: none;
 }
 
-.tabcontentFirst {
+.tabcontentHead {
   float: left;
-  padding: 0px 5px;
+  padding: 0px 0px;
   border-bottom: 1px solid #ccc;
   width: 75%;
-
+  margin-top: 75px;
   height: 300px;
   display: block;
 }
+
+
 
 
 </style>
@@ -228,7 +230,12 @@ body {font-family: 'Open Sans', sans-serif !important;}
 
 
 <div class="tab ">
-  <button class="tablinks" onmouseover="openCity(event, 'Welcome')"><i class="far fa-hand-point-right mr-2"></i>
+
+  <button class="tablinks active font-weight-bold " >
+    Theme Selection</button>
+
+  
+  <button class="tablinks " onmouseover="openCity(event, 'Welcome')"><i class="far fa-hand-point-right mr-2"></i>
 
     Welcome Email</button>
   <button class="tablinks" onmouseover="openCity(event, 'Password')">
@@ -264,6 +271,8 @@ body {font-family: 'Open Sans', sans-serif !important;}
   
 
 </div>
+
+
 
 <div id="Welcome" class="tabcontent">
   <span class="preheader" style="box-sizing: border-box; display: none !important; font-family: Arial, sans-serif; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden;">Thanks for trying out [Product Name]. We’ve pulled together some information and resources to help you get started.</span>
@@ -1083,9 +1092,12 @@ body {font-family: 'Open Sans', sans-serif !important;}
 <div class="clearfix"></div>
 
 <script>
-function openCity(evt, cityName) {
+function openCity(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
+  tabcontentHead = document.getElementsByClassName("tabcontentHead");
+  
+
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
@@ -1093,9 +1105,13 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+
+
 }
+
+
 </script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

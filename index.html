@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"/>
+
+<link rel="stylesheet"
+href="theme.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel=stylesheet>
+
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+* {box-sizing: border-box}
+body {font-family: 'Open Sans', sans-serif !important;}
+
+#navapp {
+  font-family: "Open Sans", sans-serif !important;
+  background-color: #ffffff;
+}
+
+
+.btn-orange {
+            background: #5E2BFF;
+            color: #fff !important;
+            border-color: #5E2BFF;
+            padding-top: 9px !important;
+            padding-bottom: 8px !important;
+            padding-right: 10px !important;
+            padding-left: 10px !important;
+            font-size: 13px;
+            font-weight: 500;
+            height: 40px;
+            line-height: 20px;
+            text-decoration: none !important;
+            border-radius: 3px !important;
+            display: inline-block;
+            margin-left: 50px;
+            margin-top: 30px;
+            list-style:none
+        }
+
+
+#Signupbtn {
+  background-color: #5e2bff;
+}
+
+#navbar {
+  border: 0.5px solid #d3d3d3;
+  font-size: 16px;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border-right: 1px solid #ccc;
+  background-color: #F7F7F7;
+  width: 25%;
+  height: 1175px;
+  margin-top: 75px;
+  border-left: 5px solid #5e2bff;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #EEEEEE;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #EEEEEE;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 0px;
+  border-bottom: 1px solid #ccc;
+  width: 75%;
+  margin-top: 75px;
+  height: 300px;
+  display: none;
+}
+
+.tabcontentFirst {
+  float: left;
+  padding: 0px 5px;
+  border-bottom: 1px solid #ccc;
+  width: 75%;
+
+  height: 300px;
+  display: block;
+}
+
+
+</style>
+</head>
+<body>
+
+  <!-- =================Navbar Starts here=================== -->
+
+  <div class="shadow-lg" id="navapp">
+    <nav
+      id="navbar"
+      class="navbar pt-3 pb-3 navbar-expand-lg navbar-light fixed-top bg-white shadow-md"
+    >
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a id="logo" class="navbar-brand ml-12" href="/">
+          <img style="width:150px" id="logoimg" src="https://emailx.ai/img/1.png" class="navbar-brand-img" alt="..." />
+        </a>
+
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fe fe-x"></i>
+          </button>
+
+          <!-- Navigation -->
+          <ul class="navbar-nav ml-6">
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle font-weight-normal"
+                id="navbarLandings"
+                data-toggle="dropdown"
+                href="/"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >Product</a>
+            </li>-->
+
+
+            <li class="nav-item dropdown px-2">
+              <router-link
+                class="nav-link dropdown-toggle font-weight-normal"
+                id="navbarPages"
+                data-toggle="dropdown"
+                to="/pricing"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >Products</router-link>
+            </li>
+
+     
+
+            <li class="nav-item dropdown px-2">
+              <router-link
+                class="nav-link dropdown-toggle font-weight-normal"
+                id="navbarPages"
+                data-toggle="dropdown"
+                to="/pricing"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >Pricing</router-link>
+            </li>
+            <li class="nav-item dropdown px-2">
+              <router-link
+                class="nav-link dropdown-toggle font-weight-normal"
+                id="navbarPages"
+                data-toggle="dropdown"
+                to="/faq"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >FAQ</router-link>
+            </li>
+          </ul>
+
+          <!-- Navbar Button -->
+          <a
+            class="btn btn-sm btn-outline lift ml-16 font-weight-normal"
+            href="https://app.emailx.ai/login"
+          >Log in</a>
+
+          <a
+            style="border-radius: 3px !important; padding: 7px 16px !important;"
+            id="Signupbtn"
+            class="btn btn-danger btn-sm lift font-weight-normal ml-4"
+            href="https://app.emailx.ai/register"
+          >Sign up</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+    <!-- =================Navbar ends here=================== -->
+
+
+<div class="tab ">
+  <button class="tablinks" onmouseover="openCity(event, 'Welcome')"><i class="far fa-hand-point-right mr-2"></i>
+
+    Welcome Email</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Password')">
+    <i class="far fa-hand-point-right mr-2"></i>
+    Reset Password</button>
+  <button class="tablinks" onmouseover="openCity(event, 'PasswordHelp')">
+    <i class="far fa-hand-point-right mr-2"></i>
+    Reset Password Help</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Receipt')">
+    <i class="far fa-hand-point-right mr-2"></i>
+    Receipt</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Invoice')">
+    <i class="far fa-hand-point-right mr-2"></i>
+    Invoice</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Comment')">
+    <i class="far fa-hand-point-right mr-2"></i>
+    Comment Notification</button>
+  <button class="tablinks" onmouseover="openCity(event, 'TrialExpiring')">
+    <i class="far fa-hand-point-right mr-2"></i>
+    Trial Expiring</button>
+  <button class="tablinks" onmouseover="openCity(event, 'TrialExpired')">
+    <i class="far fa-hand-point-right mr-2"></i>
+    Trial expired</button>
+  <button class="tablinks" onmouseover="openCity(event, 'UserInvite')">
+    <i class="far fa-hand-point-right mr-2"></i>
+    User Invite</button>
+
+  
+    <a
+            class="btn-orange"
+            href='/'>Download the themes</a>
+
+  
+
+</div>
+
+<div id="Welcome" class="tabcontent">
+  <span class="preheader" style="box-sizing: border-box; display: none !important; font-family: Arial, sans-serif; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden;">Thanks for trying out [Product Name]. We’ve pulled together some information and resources to help you get started.</span>
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;" bgcolor="#f2f4f6">
+      <tr>
+        <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+          <table class="email-content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;">
+            <tr>
+              <td class="email-masthead" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 23px 0; word-break: break-word;" align="center">
+                <a href="https://example.com" class="email-masthead_name" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none;">[Product Name]</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#ffffff">
+                <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+                  <tr>
+                    <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                      <h1 style="box-sizing: border-box; color: #2f3133; font-family: Arial, sans-serif; font-size: 23px; font-weight: bold; margin-top: 0;" align="left">Welcome, {{name}}!</h1>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks for trying [Product Name]. We’re thrilled to have you on board.</p>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">To get the most out of [Product Name], do this primary next step:</p>
+                      <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+                        <tr>
+                          <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                              <tr>
+                                <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                  <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                                    <tr>
+                                      <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                        <a href="{{action_url}}" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; font-size: 16px; text-decoration: none;">Do this Next</a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">For reference, here‘s your login information:</p>
+                      <table class="attributes" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 0 21px;">
+                        <tr>
+                          <td class="attributes_content" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 16px; word-break: break-word;" bgcolor="#EDEFF2">
+                            <table width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                              <tr>
+                                <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">Login Page:</strong> {{login_url}}</td>
+                              </tr>
+                              <tr>
+                                <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">Username:</strong> {{username}}</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">You‘ve started a {{trial_length}} day trial. You can upgrade to a paying account or cancel any time.</p>
+                      <table class="attributes" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 0 21px;">
+                        <tr>
+                          <td class="attributes_content" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 16px; word-break: break-word;" bgcolor="#EDEFF2">
+                            <table width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                              <tr>
+                                <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">Trial Start Date:</strong> {{trial_start_date}}</td>
+                              </tr>
+                              <tr>
+                                <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">Trial End Date:</strong> {{trial_end_date}}</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you have any questions, feel free to <a href="mailto:{{support_email}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">email our customer success team</a>. (We‘re lightning quick at replying.) We also offer <a href="{{live_chat_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">live chat</a> during business hours.</p>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks,
+                        <br />[Sender Name] and the [Product Name] Team</p>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">P.S.</strong> Need immediate help getting started? Check out our <a href="{{help_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">help documentation</a>. Or, just reply to this email, the [Product Name] support team is always ready to help!</p>
+                      <table class="body-sub" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin-top: 25px; padding-top: 25px;">
+                        <tr>
+                          <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                            <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you’re having trouble with the button above, copy and paste the URL below into your web browser.</p>
+                            <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16; line-height: 1.5em; margin-top: 0;" align="left">{{action_url}}</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+                  <tr>
+                    <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                      <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2020 [Product Name]. All rights reserved.</p>
+                      <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
+                        [Company Name, LLC]
+                        <br />1234 Street Rd.
+                        <br />Suite 1234
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<div id="Password" class="tabcontent">
+  <span class="preheader" style="box-sizing: border-box; display: none !important; font-family: Arial, sans-serif; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden;">Use this link to reset your password. The link is only valid for 24 hours.</span>
+  <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;" bgcolor="#f2f4f6">
+    <tr>
+      <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+        <table class="email-content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;">
+          <tr>
+            <td class="email-masthead" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 25px 0; word-break: break-word;" align="center">
+              <a href="https://example.com" class="email-masthead_name" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none;">[Product Name]</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#ffffff">
+              <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+                <tr>
+                  <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <h1 style="box-sizing: border-box; color: #2f3133; font-family: Arial, sans-serif; font-size: 23px; font-weight: bold; margin-top: 0;" align="left">Hi {{name}},</h1>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">You recently requested to reset your password for your [Product Name] account. Use the button below to reset it. <strong style="box-sizing: border-box; font-family: Arial, sans-serif;">This password reset is only valid for the next 24 hours.</strong></p>
+                    <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+                      <tr>
+                        <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            <tr>
+                              <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                                  <tr>
+                                    <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                      <a href="{{action_url}}" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; font-size: 16px; text-decoration: none;">Reset your password</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">For security, this request was received from a {{operating_system}} device using {{browser_name}}. If you did not request a password reset, please ignore this email or <a href="{{support_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">contact support</a> if you have questions.</p>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks,
+                      <br />The [Product Name] Team</p>
+                    <table class="body-sub" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin-top: 25px; padding-top: 25px;">
+                      <tr>
+                        <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="left">If you’re having trouble with the button above, copy and paste the URL below into your web browser.</p>
+                          <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">{{action_url}}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+              <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+                <tr>
+                  <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2020 [Product Name]. All rights reserved.</p>
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
+                      [Company Name, LLC]
+                      <br />1234 Street Rd.
+                      <br />Suite 1234
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="PasswordHelp" class="tabcontent">
+  <span class="preheader" style="box-sizing: border-box; display: none !important; font-family: Arial, sans-serif; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden;">We received a request to reset your password with this email address. ({{email_address}})</span>
+  <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;" bgcolor="#f2f4f6">
+    <tr>
+      <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+        <table class="email-content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;">
+          <tr>
+            <td class="email-masthead" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 25px 0; word-break: break-word;" align="center">
+              <a href="https://example.com" class="email-masthead_name" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none;">[Product Name]</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#ffffff">
+              <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+                <tr>
+                  <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">We received a request to reset the password to access [Product Name] with your email address ({{email_address}}) from a {{operating_system}} device using {{browser_name}}, but we were unable to find an account associated with this address.</p>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you use [Product Name] and were expecting this email, consider trying to request a password reset using the email address associated with your account.</p>
+                    <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+                      <tr>
+                        <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            <tr>
+                              <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                                  <tr>
+                                    <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                      <a href="{{action_url}}" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; font-size: 16px; text-decoration: none;">Try a different email</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you do not use [Product Name] or did not request a password reset, please ignore this email or <a href="{{support_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">contact support</a> if you have questions.</p>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks,
+                      <br />The [Product Name] Team</p>
+                    <table class="body-sub" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin-top: 25px; padding-top: 25px;">
+                      <tr>
+                        <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="left">If you’re having trouble with the button above, copy and paste the URL below into your web browser.</p>
+                          <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">{{action_url}}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+              <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+                <tr>
+                  <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2020 [Product Name]. All rights reserved.</p>
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
+                      [Company Name, LLC]
+                      <br />1234 Street Rd.
+                      <br />Suite 1234
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="Receipt" class="tabcontent">
+  <span class="preheader" style="box-sizing: border-box; display: none !important; font-family: Arial, sans-serif; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden;">This is a receipt for your recent purchase on {{ purchase_date }}. No payment is due with this receipt.</span>
+  <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;" bgcolor="#f2f4f6">
+    <tr>
+      <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+        <table class="email-content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;">
+          <tr>
+            <td class="email-masthead" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 25px 0; word-break: break-word;" align="center">
+              <a href="https://example.com" class="email-masthead_name" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none;">[Product Name]</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#ffffff">
+              <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+                <tr>
+                  <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <h1 style="box-sizing: border-box; color: #2f3133; font-family: Arial, sans-serif; font-size: 23px; font-weight: bold; margin-top: 0;" align="left">Hi {{name}},</h1>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks for using [Product Name]. This email is the receipt for your purchase. No payment is due.</p>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">This purchase will appear as “[Credit Card Statement Name]” on your credit card statement for your {{credit_card_brand}} ending in {{credit_card_last_four}}. Need to <a href="{{billing_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">update your payment information</a>?</p>
+                    <table class="discount" align="center" width="100%" cellpadding="0" cellspacing="0" style="border: 2px dashed #9ba2ab; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 0 20px; padding: 24px; width: 100%;" bgcolor="#EDEFF2">
+                      <tr>
+                        <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 20px; word-break: break-word;">
+                          <h1 class="discount_heading" style="box-sizing: border-box; color: #2f3133; font-family: Arial, sans-serif; font-size: 23px; font-weight: bold; margin-top: 0;" align="center">10% off your next purchase!</h1>
+                          <p class="discount_body" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.5em; margin-top: 0;" align="center">Thanks for your support! Here‘s a coupon for 10% off your next purchase if used by {{expiration_date}}.</p>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            <tr>
+                              <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                                  <tr>
+                                    <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                      <a href="http://example.com" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; text-decoration: none;">Use this discount now...</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="purchase" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 0 20px; padding: 35px 0; width: 100%;">
+                      <tr>
+                        <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <h3 style="box-sizing: border-box; color: #2F3133; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; margin-top: 0;" align="left">{{receipt_id}}</h3></td>
+                        <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <h3 class="align-right" style="box-sizing: border-box; color: #2F3133; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; margin-top: 0;" align="right">{{date}}</h3></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <table class="purchase_content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 25px 0 0; width: 100%;">
+                            <tr>
+                              <th class="purchase_heading" style="border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; padding-bottom: 8px;">
+                                <p style="box-sizing: border-box; color: #9BA2AB; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin: 0;" align="left">Description</p>
+                              </th>
+                              <th class="purchase_heading" style="border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; padding-bottom: 8px;">
+                                <p class="align-right" style="box-sizing: border-box; color: #9BA2AB; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin: 0;" align="right">Amount</p>
+                              </th>
+                            </tr>
+                            {{#each receipt_details}}
+                            <tr>
+                              <td width="80%" class="purchase_item" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 15px; line-height: 18px; padding: 10px 0; word-break: break-word;">{{description}}</td>
+                              <td class="align-right" width="20%" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;" align="right">{{amount}}</td>
+                            </tr>
+                            {{/each}}
+                            <tr>
+                              <td width="80%" class="purchase_footer" valign="middle" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; padding-top: 15px; word-break: break-word;">
+                                <p class="purchase_total purchase_total--label" style="box-sizing: border-box; color: #2F3133; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.5em; margin: 0; padding: 0 15px 0 0;" align="right">Total</p>
+                              </td>
+                              <td width="20%" class="purchase_footer" valign="middle" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; padding-top: 15px; word-break: break-word;">
+                                <p class="purchase_total" style="box-sizing: border-box; color: #2F3133; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.5em; margin: 0;" align="right">{{total}}</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you have any questions about this receipt, simply reply to this email or reach out to our <a href="{{support_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">support team</a> for help.</p>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Cheers,
+                      <br />The [Product Name] Team</p>
+                    <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+                      <tr>
+                        <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            <tr>
+                              <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                                  <tr>
+                                    <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                      <a href="{{action_url}}" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; font-size: 16px; text-decoration: none;">Download as PDF</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="body-sub" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin-top: 25px; padding-top: 25px;">
+                      <tr>
+                        <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Need a printable copy for your records? You can <a href="{{action_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">download a PDF version</a>.</p>
+                          <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="left">Moved recently? Have a new credit card? You can easily <a href="{{billing_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">update your billing information</a>.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+              <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+                <tr>
+                  <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2020 [Product Name]. All rights reserved.</p>
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
+                      [Company Name, LLC]
+                      <br />1234 Street Rd.
+                      <br />Suite 1234
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="Invoice" class="tabcontent">
+  <span class="preheader" style="box-sizing: border-box; display: none !important; font-family: Arial, sans-serif; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden;">This is an invoice for your purchase on {{ purchase_date }}. Please submit payment by {{ due_date }}</span>
+  <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;" bgcolor="#f2f4f6">
+    <tr>
+      <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+        <table class="email-content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;">
+          <tr>
+            <td class="email-masthead" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 25px 0; word-break: break-word;" align="center">
+              <a href="https://example.com" class="email-masthead_name" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none;">[Product Name]</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#ffffff">
+              <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+                <tr>
+                  <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <h1 style="box-sizing: border-box; color: #2f3133; font-family: Arial, sans-serif; font-size: 23px; font-weight: bold; margin-top: 0;" align="left">Hi {{name}},</h1>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks for using [Product Name]. This is an invoice for your recent purchase.</p>
+                    <table class="attributes" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                      <tr>
+                        <td class="attributes_content" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            <tr>
+                              <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">Amount Due:</strong> {{total}}</td>
+                            </tr>
+                            <tr>
+                              <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">Due By:</strong> {{due_date}}</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+                      <tr>
+                        <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            <tr>
+                              <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                                  <tr>
+                                    <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                      <a href="{{action_url}}" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; font-size: 16px; text-decoration: none;">Pay this Invoice</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="purchase" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 35px 0; width: 100%;">
+                      <tr>
+                        <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <h3 style="box-sizing: border-box; color: #2F3133; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; margin-top: 0;" align="left">{{invoice_id}}</h3></td>
+                        <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <h3 class="align-right" style="box-sizing: border-box; color: #2F3133; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; margin-top: 0;" align="right">{{date}}</h3></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <table class="purchase_content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 25px 0 0; width: 100%;">
+                            <tr>
+                              <th class="purchase_heading" style="border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; padding-bottom: 8px;">
+                                <p style="box-sizing: border-box; color: #9BA2AB; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin: 0;" align="left">Description</p>
+                              </th>
+                              <th class="purchase_heading" style="border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; padding-bottom: 8px;">
+                                <p class="align-right" style="box-sizing: border-box; color: #9BA2AB; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin: 0;" align="right">Amount</p>
+                              </th>
+                            </tr>
+                            {{#each invoice_details}}
+                            <tr>
+                              <td width="80%" class="purchase_item" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 15px; line-height: 18px; padding: 10px 0; word-break: break-word;">{{description}}</td>
+                              <td class="align-right" width="20%" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;" align="right">{{amount}}</td>
+                            </tr>
+                            {{/each}}
+                            <tr>
+                              <td width="80%" class="purchase_footer" valign="middle" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; padding-top: 15px; word-break: break-word;">
+                                <p class="purchase_total purchase_total--label" style="box-sizing: border-box; color: #2F3133; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.5em; margin: 0; padding: 0 15px 0 0;" align="right">Total</p>
+                              </td>
+                              <td width="20%" class="purchase_footer" valign="middle" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; padding-top: 15px; word-break: break-word;">
+                                <p class="purchase_total" style="box-sizing: border-box; color: #2F3133; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.5em; margin: 0;" align="right">{{total}}</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you have any questions about this invoice, simply reply to this email or reach out to our <a href="{{support_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">support team</a> for help.</p>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Cheers,
+                      <br />The [Product Name] Team</p>
+                    <table class="body-sub" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin-top: 25px; padding-top: 25px;">
+                      <tr>
+                        <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you’re having trouble with the button above, copy and paste the URL below into your web browser.</p>
+                          <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="left">{{action_url}}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+              <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+                <tr>
+                  <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2020 [Product Name]. All rights reserved.</p>
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
+                      [Company Name, LLC]
+                      <br />1234 Street Rd.
+                      <br />Suite 1234
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="Comment" class="tabcontent">
+  <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;" bgcolor="#f2f4f6">
+    <tr>
+      <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+        <table class="email-content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;">
+          <tr>
+            <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#ffffff">
+              <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+                <tr>
+                  <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    {{body}}
+                    <br />
+                    <br /> {{#attachment_details}}
+                    <table class="attributes" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 0 21px;">
+                      <tr>
+                        <td class="attributes_content" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 16px; word-break: break-word;" bgcolor="#EDEFF2">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            {{#each . }}
+                            <tr>
+                              <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><a href="{{attachment_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">{{attachment_name}}</a> <span style="box-sizing: border-box; font-family: Arial, sans-serif;">({{attachment_size}} {{attachment_type}})</span></td>
+                            </tr>
+                            {{/each}}
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    {{/attachment_details}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+          <tr>
+            <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+              <p style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">By {{commenter_name}} at {{timestamp}}</p>
+              <p class="sub" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="left"><a href="{{action_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif; font-size: 16px;">View the comment</a> or <a href="{{notifications_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Manage notifications</a></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="TrialExpiring" class="tabcontent">
+  <span class="preheader" style="box-sizing: border-box; display: none !important; font-family: Arial, sans-serif; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden;">Your trial period for [Product Name] is about expired. Is there anything we can do to help?</span>
+  <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;" bgcolor="#f2f4f6">
+    <tr>
+      <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+        <table class="email-content" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%;">
+          <tr>
+            <td class="email-masthead" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 25px 0; word-break: break-word;" align="center">
+              <a href="https://example.com" class="email-masthead_name" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none;">[Product Name]</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#ffffff">
+              <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+                <tr>
+                  <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <h1 style="box-sizing: border-box; color: #2f3133; font-family: Arial, sans-serif; font-size: 23px; font-weight: bold; margin-top: 0;" align="left">Your [Product Name] trial ends in 3 days </h1>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks for trying [Product Name]. You‘ve added a lot of data, so here are several options for you to consider going forward.</p>
+                    <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+                      <tr>
+                        <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            <tr>
+                              <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                                  <tr>
+                                    <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                      <a href="{{action_url}}" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; font-size: 16px; text-decoration: none;">Upgrade your account</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you‘re not ready to upgrade to a paying account, you have a few other options available to you…</p>
+                    <table class="attributes" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 0 21px;">
+                      <tr>
+                        <td class="attributes_content" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 16px; word-break: break-word;" bgcolor="#EDEFF2">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                            <tr>
+                              <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;"><a href="{{trial_extension_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Restart your trial</a></strong> - If you didn‘t get a chance to fully try out the product or need a little more time to evaluate, just let us know. Simply reply to this email and we‘ll extend your trial period.
+                                <br />
+                                <br />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;"><a href="{{feedback_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Share feedback</a></strong> - If [Product Name] isn‘t right for you, let us know what you were looking for and we might be able to suggest some alternatives that might be a better fit.
+                                <br />
+                                <br />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;"><a href="{{export_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Export your data</a></strong> - If [Product Name] wasn‘t a good fit, you can export your data for use elsewhere.
+                                <br />
+                                <br />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;"><a href="{{close_account_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Close your account</a></strong> - You can close your account and delete your data. Or, do nothing and we‘ll automatically close it and delete your data for you in 90 days. But don‘t worry, we‘ll send you another email before that happens.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Regardless of your choice, we want to say thank you for trying [Product Name]. We know it‘s an investment of your time, and we appreciate you giving us a chance.</p>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks,
+                      <br />[Sender Name] and the [Product Name] Team</p>
+                    <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">P.S.</strong> If you have any questions or need any help, please don‘t hesitate to reach out. You can reply to this email or join us on live chat during business hours.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+              <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+                <tr>
+                  <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2020 [Product Name]. All rights reserved.</p>
+                    <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
+                      [Company Name, LLC]
+                      <br />1234 Street Rd.
+                      <br />Suite 1234
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div  id="TrialExpired" class="tabcontent">
+
+                <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+                  <tr>
+                    <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                      <h1 style="box-sizing: border-box; color: #2f3133; font-family: Arial, sans-serif; font-size: 23px; font-weight: bold; margin-top: 0;" align="left">Your [Product Name] trial expired</h1>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks for trying [Product Name]. You‘ve added a lot of data, so here are several options for you to consider going forward.</p>
+                      <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+                        <tr>
+                          <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                              <tr>
+                                <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                  <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                                    <tr>
+                                      <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                                        <a href="{{action_url}}" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; font-size: 16px; text-decoration: none;">Upgrade your account</a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you‘re not ready to upgrade to a paying account, you have a few other options available to you…</p>
+                      <table class="attributes" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 0 21px;">
+                        <tr>
+                          <td class="attributes_content" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 16px; word-break: break-word;" bgcolor="#EDEFF2">
+                            <table width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                              <tr>
+                                <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;"><a href="{{trial_extension_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Restart your trial</a></strong> - If you didn‘t get a chance to fully try out the product or need a little more time to evaluate, just let us know. Simply reply to this email and we‘ll extend your trial period.
+                                  <br />
+                                  <br />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;"><a href="{{feedback_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Share feedback</a></strong> - If [Product Name] isn‘t right for you, let us know what you were looking for and we might be able to suggest some alternatives that might be a better fit.
+                                  <br />
+                                  <br />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;"><a href="{{export_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Export your data</a></strong> - If [Product Name] wasn‘t a good fit, you can export your data for use elsewhere.
+                                  <br />
+                                  <br />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="attributes_item" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 0; word-break: break-word;"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;"><a href="{{close_account_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">Close your account</a></strong> - You can close your account and delete your data. Or, do nothing and we‘ll automatically close it and delete your data for you in 90 days. But don‘t worry, we‘ll send you another email before that happens.</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Regardless of your choice, we want to say thank you for trying [Product Name]. We know it‘s an investment of your time, and we appreciate you giving us a chance.</p>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Thanks,
+                        <br />[Sender Name] and the [Product Name] Team</p>
+                      <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">P.S.</strong> If you have any questions or need any help, please don‘t hesitate to reach out. You can reply to this email or join us on live chat during business hours.</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+                  <tr>
+                    <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+                      <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2020 [Product Name]. All rights reserved.</p>
+                      <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
+                        [Company Name, LLC]
+                        <br />1234 Street Rd.
+                        <br />Suite 1234
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<div id="UserInvite" class="tabcontent">
+  <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#ffffff">
+    <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#ffffff">
+      
+      <tr>
+        <td class="content-cell" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+          <h1 style="box-sizing: border-box; color: #2f3133; font-family: Arial, sans-serif; font-size: 23px; font-weight: bold; margin-top: 0;" align="left">Hi, {{name}}!</h1>
+          <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">{{invite_sender_name}} with {{invite_sender_organization_name}} has invited you to use [Product Name] to collaborate with them. Use the button below to set up your account and get started:</p>
+          
+          <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+            <tr>
+              <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                  <tr>
+                    <td align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                      <table border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; font-family: Arial, sans-serif;">
+                        <tr>
+                          <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                            <a href="{{action_url}}" class="button button--blue" target="_blank" style="-webkit-text-size-adjust: none; background: #007dcc; border-color: #007dcc; border-radius: 3px; border-style: solid; border-width: 10px 18px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); box-sizing: border-box; color: #ffffff; display: inline-block; font-family: Arial, sans-serif; font-size: 16px; text-decoration: none;">Set up account</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you have any questions for {{invite_sender_name}}, you can reply to this email and it will go right to them. Alternatively, feel free to <a href="mailto:{{support_email}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">contact our customer success team</a> anytime. (We‘re lightning quick at replying.) We also offer <a href="{{live_chat_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">live chat</a> during business hours.</p>
+          <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">Welcome aboard,
+            <br />The [Product Name] Team</p>
+          <p style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left"><strong style="box-sizing: border-box; font-family: Arial, sans-serif;">P.S.</strong> Need help getting started? Check out our <a href="{{help_url}}" style="box-sizing: border-box; color: #007dcc; font-family: Arial, sans-serif;">help documentation</a>.</p>
+          
+          <table class="body-sub" style="border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, sans-serif; margin-top: 25px; padding-top: 25px;">
+            <tr>
+              <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+                <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">If you’re having trouble with the button above, copy and paste the URL below into your web browser.</p>
+                <p class="sub" style="box-sizing: border-box; color: #74787e; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="left">{{action_url}}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td style="box-sizing: border-box; font-family: Arial, sans-serif; word-break: break-word;">
+    <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+      <tr>
+        <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, sans-serif; padding: 35px; word-break: break-word;">
+          <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2020 [Product Name]. All rights reserved.</p>
+          <p class="sub align-center" style="box-sizing: border-box; color: #bbbfc3; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
+            [Company Name, LLC]
+            <br />1234 Street Rd.
+            <br />Suite 1234
+          </p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="clearfix"></div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="assets/js/theme.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+   
+</body>
+</html> 
+
